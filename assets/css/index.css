@@ -384,3 +384,172 @@ span {
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
 }
+
+/* Responsive pour les écrans de 768px de largeur ou moins */
+@media (max-width: 768px) {
+  /* Adapter la taille du texte globalement */
+  html {
+    font-size: 50%;
+  }
+
+  /* Réduire la taille de l'en-tête et ajuster les espacements */
+  .header {
+    padding: 2rem 8%;
+  }
+
+  /* Logo et menu hamburger */
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  /* Afficher le menu hamburger */
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Masquer la navbar par défaut */
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  /* Afficher la navbar lorsque le menu est ouvert */
+  .navbar.active {
+    display: flex;
+  }
+
+  /* Ajuster les liens du menu */
+  .navbar a {
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  /* Réduire la taille du contenu d'accueil */
+  .home {
+    flex-direction: column;
+    text-align: center;
+    gap: 5rem;
+  }
+
+  .home-content {
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+    max-width: 100%;
+  }
+
+  .home-circle {
+    display: none;
+  }
+
+  /* Ajuster les boutons */
+  .btn-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Ajuster la section Éducation */
+  .education {
+    padding: 50px 15px;
+  }
+
+  .timeline-items {
+    padding-left: 40px;
+  }
+
+  .timeline-items::before {
+    left: 0; /* La ligne verticale de la timeline sera placée complètement à gauche */
+  }
+
+  .timeline-dot {
+    left: -28px; /* Ajuster la position du dot par rapport à la ligne verticale */
+  }
+
+  .timeline-content {
+    padding-left: 2rem; /* Ajuster le padding à gauche pour éviter que le contenu ne chevauche la ligne */
+    padding-right: 2rem; /* Ajouter un peu de padding à droite pour garder l'esthétique */
+    text-align: left; /* Centrer le texte à gauche sur les petits écrans */
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+  }
+
+  .timeline-item:nth-child(even) {
+    padding-left: 0;
+  }
+}
+
+/* Responsive pour les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .header {
+    padding: 1.5rem 5%;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .navbar a {
+    font-size: 1.8rem;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+  }
+
+  .social-icons a {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+
+  .timeline-content {
+    padding: 20px 30px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .timeline-content p {
+    font-size: 1.4rem;
+  }
+}
