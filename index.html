@@ -17,17 +17,17 @@
       <i class="bx bx-menu" id="menu-icon"></i>
 
       <nav class="navbar">
-        <a href="#home">Accueil</a>
+        <a href="#home" class="active">Accueil</a>
         <a href="#education">Éducation</a>
         <a href="#projects">Projets</a>
-        <a href="#skills">Compétences</a>
-        <a href="#contact">Contact</a>
+        <a href="#skills">Compétences (bientôt)</a>
+        <a href="#contact">Contact (bientot)</a>
       </nav>
     </header>
 
     <section class="home" id="home">
       <div class="home-content">
-        <h1>Bonjour, je m'apelle <span>Lucas</span></h1>
+        <h1>Bonjour, je m'appelle <span>Lucas</span></h1>
         <h3 class="text-animation">Je suis <span></span></h3>
         <p>
           Je suis en 2ème année de BUT informatique à l'IUT de Lens. J'ai acquis
@@ -112,6 +112,101 @@
         </div>
       </div>
     </section>
+
+    <section class="projects" id="projects">
+      <div class="projects-box">
+        <h2 class="heading">Projets</h2>
+        <div class="wrapper">
+          <div class="projects-item">
+            <img
+              src="assets/images/marathon-web.png"
+              alt="image représentant le marathon web"
+            />
+            <h2>Projet marathon</h2>
+            <div class="rating"></div>
+            <p>
+              Ce projet web utilise Laravel pour gérer l'ensemble de
+              l'architecture serveur. Grâce à PHP, nous avons développé des
+              fonctionnalités, tandis que HTML et CSS structurent et stylisent
+              l'interface utilisateur. Les MMI gèrent le front-end, tandis que
+              nous nous occupons du back-end.
+            </p>
+          </div>
+          <div class="projects-item">
+            <img
+              src="assets/images/demineur.png"
+              alt="image représentant un démineur"
+            />
+            <h2>Démineur</h2>
+            <div class="rating"></div>
+            <p>
+              Ce projet personnel consiste en un jeu de démineur développé avec
+              JavaFX, en utilisant le modèle MVC pour une meilleure organisation
+              du code. Le modèle gère la logique du jeu, comme la création de la
+              grille et la gestion des mines. Le contrôleur coordonne les
+              interactions entre l'interface et la logique, tandis que la vue
+              s'occupe de l'affichage des informations à l'utilisateur.
+            </p>
+          </div>
+          <div class="projects-item">
+            <img
+              src="assets/images/pokedex.png"
+              alt="image représentant un pokédex"
+            />
+            <h2>Pokédex</h2>
+            <div class="rating"></div>
+            <p>
+              Ce projet de Pokédex est développé en Python et utilise des
+              requêtes SQL pour gérer une base de données contenant des
+              informations sur les Pokémon. Les données sont récupérées et
+              manipulées via des requêtes SQL, permettant de stocker,
+              rechercher, et filtrer les Pokémon selon différents critères
+              (type, bruit, statistiques, etc.). L'application offre une
+              interface utilisateur simple qui permet d'afficher les résultats
+              des requêtes en temps réel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/lucas-perez-b390ab303"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/Dev-LucasP"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a
+          href="mailto:lucas.perez59450@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-gmail"></i
+        ></a>
+      </div>
+      <ul>
+        <li>
+          <a href="#education">Éducation</a>
+        </li>
+        <li>
+          <a href="#projects">Projets</a>
+        </li>
+        <li>
+          <a href="#skills">Compétences</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <p class="copyright">&copy; 2024 Lucas Perez | Tous droits réservés.</p>
+    </footer>
 
     <script src="assets/js/index.js"></script>
   </body>
