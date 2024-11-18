@@ -114,7 +114,7 @@ span {
 }
 
 .home-content h1 {
-  font-size: 4rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-top: 1.5rem;
   line-height: 1;
@@ -385,14 +385,14 @@ span {
   background: var(--bg-color);
 }
 
-/* testimonials.css */
+/* skills.css */
 
-.projects {
+.skills {
   background: var(--bg-color);
   margin-bottom: 10rem;
 }
 
-.projects-box {
+.skills-box {
   background-size: cover;
   display: flex;
   align-items: center;
@@ -400,12 +400,12 @@ span {
   flex-direction: column;
 }
 
-.projects .heading {
+.skills .heading {
   margin-bottom: 5rem;
 }
 
-.projects-box img {
-  width: 15rem;
+.skills-box img {
+  width: 10rem;
   border-radius: 50%;
   border: 3px solid var(--main-color);
   box-shadow: 0 0 25px var(--main-color);
@@ -413,13 +413,13 @@ span {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 3rem;
 }
 
-.projects-item {
-  min-height: 550px;
-  max-width: 450px;
+.skills-item {
+  width: 200px; /* Assurez-vous que la largeur et la hauteur sont égales */
+  height: 200px; /* Assurez-vous que la largeur et la hauteur sont égales */
   background: var(--second-bg-color);
   border: 3px solid rgba(238, 238, 238, 0.2);
   border-radius: 2rem;
@@ -436,32 +436,23 @@ span {
   transition: 0.4s ease-in-out;
 }
 
-.projects-item:hover {
+.skills-item:hover {
   border: 3px solid var(--main-color);
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 0 50px var(--main-color);
 }
 
-.projects-item h2 {
+.skills-item {
+  color: inherit;
+  text-decoration: none;
+}
+
+.skills-item h2 {
   font-size: 2.8rem;
 }
 
-.projects-item p {
+.skills-item p {
   font-size: 1.3rem;
-}
-
-.projects-item .image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.projects-item .text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer {
@@ -566,12 +557,35 @@ span {
     left: 0;
   }
 
-  .projects .wrapper {
-    grid-template-columns: repeat(1, 1fr);
+  .skills .heading {
+    font-size: 6.5rem;
+  }
+
+  .skills-box img {
+    width: 5rem;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills-item {
+    width: 100px; /* Assurez-vous que la largeur et la hauteur sont égales */
+    height: 100px; /* Assurez-vous que la largeur et la hauteur sont égales */
+    margin: 0 -1rem;
+  }
+
+  .skills-item h2 {
+    font-size: 2rem;
   }
 
   .footer {
     padding: 2rem 3%;
+  }
+
+  .footer ul li {
+    display: inline-block;
+    padding: 0 5px;
   }
 }
 
@@ -610,7 +624,7 @@ span {
   }
 
   .home-content h1 {
-    font-size: 8rem;
+    font-size: 6.9rem;
   }
 
   .home-content p {
