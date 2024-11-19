@@ -36,3 +36,64 @@ function showMessage() {
     messageElement.style.display = "none"; // Cache le message
   }, 5000);
 }
+
+function showProjectDetails(title, description, link) {
+  const projectDetailsOverlay = document.createElement("div");
+  projectDetailsOverlay.classList.add("project-details-overlay");
+
+  const projectDetails = `
+    <div class="project-details-container">
+      <span class="close-btn" onclick="closeProjectDetails()">&times;</span>
+      <h2>${title}</h2>
+      <p>${description}</p>
+      <br>
+      <a href="${link}" target="_blank">Voir</a>
+    </div>
+  `;
+
+  projectDetailsOverlay.innerHTML = projectDetails;
+
+  // Ajout de l'écouteur pour fermer en cliquant en dehors
+  projectDetailsOverlay.addEventListener("click", (event) => {
+    if (event.target === projectDetailsOverlay) {
+      closeProjectDetails();
+    }
+  });
+
+  document.body.appendChild(projectDetailsOverlay);
+}
+
+function closeProjectDetails() {
+  const projectDetailsOverlay = document.querySelector(
+    ".project-details-overlay"
+  );
+  if (projectDetailsOverlay) {
+    projectDetailsOverlay.remove();
+  }
+}
+
+function showProjectNotFinished(title, description, link) {
+  const projectDetailsOverlay = document.createElement("div");
+  projectDetailsOverlay.classList.add("project-details-overlay");
+
+  const projectDetails = `
+    <div class="project-details-container">
+      <span class="close-btn" onclick="closeProjectDetails()">&times;</span>
+      <h2>${title}</h2>
+      <p>${description}</p>
+      <br>
+      <p style="color: red;"> En cours de développement </p>
+    </div>
+  `;
+
+  projectDetailsOverlay.innerHTML = projectDetails;
+
+  // Ajout de l'écouteur pour fermer en cliquant en dehors
+  projectDetailsOverlay.addEventListener("click", (event) => {
+    if (event.target === projectDetailsOverlay) {
+      closeProjectDetails();
+    }
+  });
+
+  document.body.appendChild(projectDetailsOverlay);
+}
