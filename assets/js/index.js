@@ -25,3 +25,14 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
+
+function showMessage() {
+  const messageElement = document.getElementById("message");
+  messageElement.style.display = "block"; // Affiche le message
+  messageElement.textContent = "En cours de développement"; // Définit le texte du message
+
+  // Masque le message après 10 secondes (10 000 ms)
+  setTimeout(() => {
+    messageElement.style.display = "none"; // Cache le message
+  }, 5000);
+}
