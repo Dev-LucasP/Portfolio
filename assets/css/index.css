@@ -572,7 +572,7 @@ span {
   .skills-item {
     width: 100px; /* Assurez-vous que la largeur et la hauteur sont égales */
     height: 100px; /* Assurez-vous que la largeur et la hauteur sont égales */
-    margin: 0 -1rem;
+    margin: 0 -1.35rem;
   }
 
   .skills-item h2 {
