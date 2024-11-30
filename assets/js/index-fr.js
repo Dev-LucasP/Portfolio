@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (selectedLang === "en") {
         window.location.href = "index-en.html";
       } else if (selectedLang === "fr") {
-        window.location.href = "index-fr.html";
+        window.location.href = "index.html";
       } else if (selectedLang == "always") {
         popup.style.display = "none";
       }
