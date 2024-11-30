@@ -28,12 +28,11 @@ menuIcon.onclick = () => {
 
 function showMessage() {
   const messageElement = document.getElementById("message");
-  messageElement.style.display = "block"; // Affiche le message
-  messageElement.textContent = "En cours de développement"; // Définit le texte du message
+  messageElement.style.display = "block";
+  messageElement.textContent = "Under development";
 
-  // Masque le message après 10 secondes (10 000 ms)
   setTimeout(() => {
-    messageElement.style.display = "none"; // Cache le message
+    messageElement.style.display = "none";
   }, 5000);
 }
 
@@ -53,7 +52,6 @@ function showProjectDetails(title, description, link) {
 
   projectDetailsOverlay.innerHTML = projectDetails;
 
-  // Ajout de l'écouteur pour fermer en cliquant en dehors
   projectDetailsOverlay.addEventListener("click", (event) => {
     if (event.target === projectDetailsOverlay) {
       closeProjectDetails();
@@ -82,13 +80,12 @@ function showProjectNotFinished(title, description, link) {
       <h2>${title}</h2>
       <p>${description}</p>
       <br>
-      <p style="color: red;"> En cours de développement </p>
+      <p style="color: red;"> Under development </p>
     </div>
   `;
 
   projectDetailsOverlay.innerHTML = projectDetails;
 
-  // Ajout de l'écouteur pour fermer en cliquant en dehors
   projectDetailsOverlay.addEventListener("click", (event) => {
     if (event.target === projectDetailsOverlay) {
       closeProjectDetails();
@@ -97,3 +94,49 @@ function showProjectNotFinished(title, description, link) {
 
   document.body.appendChild(projectDetailsOverlay);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("language-popup");
+  const buttons = document.querySelectorAll(".lang-btn");
+
+  if (localStorage.getItem("redirected") === "true") {
+    popup.style.display = "none";
+    localStorage.removeItem("redirected");
+  } else {
+    popup.style.display = "flex";
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedLang = button.getAttribute("data-lang");
+
+      localStorage.setItem("redirected", "true");
+
+      if (selectedLang === "en") {
+        window.location.href = "index-en.html";
+      } else if (selectedLang === "fr") {
+        window.location.href = "index-fr.html";
+      } else if (selectedLang == "always") {
+        popup.style.display = "none";
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slideElements = document.querySelectorAll(".slide-in");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  slideElements.forEach((el) => observer.observe(el));
+});

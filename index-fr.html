@@ -4,13 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="icon" type="image/png" href="assets/images/logo-rond.png" />
+    <link rel="stylesheet" href="assets/css/index-fr.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
+    <div id="language-popup" class="popup">
+      <div class="popup-content">
+        <h2>Choisissez votre langue / Choose your language</h2>
+        <button class="lang-btn" data-lang="always">Français</button>
+        <button class="lang-btn" data-lang="en">English</button>
+      </div>
+    </div>
     <header class="header">
       <a href="#home" class="logo">Lucas <span>Perez</span></a>
 
@@ -21,7 +29,7 @@
         <a href="#education">Éducation</a>
         <a href="#projects">Projets</a>
         <a href="#skills">Compétences</a>
-        <a href="#contact">Contact</a>
+        <!-- <a href="#contact">Contact</a> -->
       </nav>
     </header>
 
@@ -58,7 +66,7 @@
         </div>
         <div class="btn-group">
           <a
-            href="assets/files/CV.pdf"
+            href="assets/files/CV-perez-lucas-fr.pdf"
             class="btn"
             download="CV-perez-lucas.pdf"
             >Mon CV</a
@@ -75,9 +83,9 @@
       </div>
     </section>
 
-    <section class="education" id="education">
-      <h2 class="heading">Éducation</h2>
-      <div class="timeline-items">
+    <section class="education slide-container" id="education">
+      <h2 class="heading slide-in">Éducation</h2>
+      <div class="timeline-items slide-in">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">2023 - Présent</div>
@@ -121,8 +129,8 @@
       </div>
     </section>
 
-    <section class="projects" id="projects">
-      <div class="projects-box">
+    <section class="projects slide-container" id="projects">
+      <div class="projects-box slide-in">
         <h2 class="heading">Projets</h2>
         <div class="wrapper">
           <div
@@ -151,6 +159,14 @@
 
           <div
             class="projects-item"
+            onclick="showProjectDetails('Démineur', 'Ce projet est un jeu développé en Java avec JavaFX. Il s\'agit d\'une adaptation du jeu Démineur, où le joueur doit révéler des cases sans déclencher de mines, avec la possibilité de jouer sur différentes tailles de grilles pour varier la difficulté.', 'https://github.com/Dev-LucasP/Demineur')"
+          >
+            <h2>🧨</h2>
+            <h3>Démineur</h3>
+          </div>
+
+          <div
+            class="projects-item"
             onclick="showProjectNotFinished('Marathon Web', 'Ce projet est un site web développé en PHP avec le framework Laravel, prévu pour être réalisé les 18 et 19 décembre 2025, pendant la période des examens.', 'https://github.com/Dev-LucasP/MarathonWeb')"
           >
             <h2>🏃‍♂️</h2>
@@ -163,14 +179,6 @@
           >
             <h2>💣</h2>
             <h3>Bomberman</h3>
-          </div>
-
-          <div
-            class="projects-item"
-            onclick="showProjectNotFinished('Démineur', 'Ce projet est un jeu développé en Java avec JavaFX. Il s\'agit d\'une adaptation du jeu Démineur, où le joueur doit révéler des cases sans déclencher de mines, avec la possibilité de jouer sur différentes tailles de grilles pour varier la difficulté.', 'https://github.com/Dev-LucasP/Demineur')"
-          >
-            <h2>🧨</h2>
-            <h3>Démineur</h3>
           </div>
 
           <div
@@ -192,8 +200,8 @@
       </div>
     </section>
 
-    <section class="skills" id="skills">
-      <div class="skills-box">
+    <section class="skills slide-container" id="skills">
+      <div class="skills-box slide-in">
         <h2 class="heading">Compétences</h2>
         <div class="wrapper">
           <div class="skills-item">
@@ -382,6 +390,9 @@
       </div>
       <ul>
         <li>
+          <a href="#home">Accueil</a>
+        </li>
+        <li>
           <a href="#education">Éducation</a>
         </li>
         <li>
@@ -390,13 +401,13 @@
         <li>
           <a href="#skills">Compétences</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="#contact">Contact</a>
-        </li>
+        </li> -->
       </ul>
       <p class="copyright">&copy; 2024 Lucas Perez | Tous droits réservés.</p>
     </footer>
 
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/index-fr.js"></script>
   </body>
 </html>

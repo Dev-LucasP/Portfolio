@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/index-en.css" />
+    <link rel="icon" type="image/png" href="assets/images/logo-rond.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="language-popup" class="popup">
+      <div class="popup-content">
+        <h2>Choose your language / Choisissez votre langue</h2>
+        <button class="lang-btn" data-lang="always">English</button>
+        <button class="lang-btn" data-lang="fr">Français</button>
+      </div>
+    </div>
+    <header class="header">
+      <a href="#home" class="logo">Lucas <span>Perez</span></a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <!-- <a href="#contact">Contact</a> -->
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hello, my name is <span>Lucas</span></h1>
+        <h3 class="text-animation">I am <span></span></h3>
+        <p>
+          I'm in my 2nd year of a computer science degree at the IUT in Lens. I
+          have acquired solid skills in programming and web development. My goal
+          is to explore new technologies and enrich my knowledge knowledge to
+          make a difference in the world of development world.
+        </p>
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/lucas-perez-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/Dev-LucasP"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="mailto:lucas.perez59450@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bx bxl-gmail"></i
+          ></a>
+        </div>
+        <div class="btn-group">
+          <a
+            href="assets/files/CV-perez-lucas-en.pdf"
+            class="btn"
+            download="CV-perez-lucas.pdf"
+            >My CV</a
+          >
+          <a href="#contact" class="btn" onclick="showMessage()">Contact me</a>
+          <p id="message" style="display: none; color: red"></p>
+        </div>
+      </div>
+
+      <div class="home-circle">
+        <div class="neon-circle"></div>
+      </div>
+    </section>
+
+    <section class="education slide-container" id="education">
+      <h2 class="heading slide-in">Education</h2>
+      <div class="timeline-items slide-in">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - Now</div>
+          <div class="timeline-content">
+            <h3>University of Lens</h3>
+            <p>
+              I'm currently in my 2nd year at the IUT in Lens, specializing in
+              with a particular interest in web development and and Java
+              projects. My career path has enabled me to strengthen my technical
+              skills and take part in various projects.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - 2023</div>
+          <div class="timeline-content">
+            <h3>High school Arthur Rimbaud in Sin-le-Noble</h3>
+            <p>
+              At Lycée Arthur Rimbaud, I deepened my knowledge of mathematics,
+              NSI (Numérique et Science Informatique), and physics and
+              chemistry. These specialties enabled me to develop scientific
+              scientific rigor and a passion for technology, preparing me
+              preparing me for computer-related studies.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2016 - 2020</div>
+          <div class="timeline-content">
+            <h3>Middle school Anatole France in Sin-le-Noble</h3>
+            <p>
+              During my years at the Collège Anatole France in Sin-le-Noble, I
+              developed a strong interest in scientific subjects, while also
+              acquired a solid grounding in various disciplines. This period
+              marked the beginning of my academic career.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects slide-container" id="projects">
+      <div class="projects-box slide-in">
+        <h2 class="heading slide-in">Projects</h2>
+        <div class="wrapper slide-in">
+          <div
+            class="projects-item"
+            onclick="showProjectDetails('Pokedex', 'This project involves developing an interactive Pokedex using Python. It combines a user interface created with the tkinter module, pygame and sqlite3. Pokemon data, such as names, types and descriptions, are managed in a database. Each Pokemon is also associated with a picture illustrating its appearance.', 'https://github.com/Dev-LucasP/Pokedex')"
+          >
+            <h2>🔍</h2>
+            <h3>Pokedex</h3>
+          </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectDetails('LensJudge', 'LENSJudge is a program designed to automate the compilation, execution and verification of programs submitted to programming competitions. It compares the results of submissions with predefined expectations to assess the conformity of proposed solutions.', 'https://github.com/Dev-LucasP/LENSJudge')"
+          >
+            <h2>⚖️</h2>
+            <h3>LensJudge</h3>
+          </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectDetails('Portfolio', 'My portfolio is a showcase of my skills and projects. It reflects my career path, my achievements and the tools I\'ve mastered.', 'https://github.com/Dev-LucasP/Portfolio')"
+          >
+            <h2>🌐</h2>
+            <h3>Portfolio</h3>
+          </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectNotFinished('Web Marathon', 'This project is a website developed in PHP with the Laravel framework, scheduled for completion on December 18 and 19, 2025, during the exam period.', 'https://github.com/Dev-LucasP/MarathonWeb')"
+          >
+            <h2>🏃‍♂️</h2>
+            <h3>Web Marathon</h3>
+          </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectNotFinished('Bomberman', 'This project is a game developed in Java with JavaFX, in a team of 4. It\'s an adaptation of the game Bomberman, where the player can move around on different maps, eliminating enemies and destroying walls.', 'https://github.com/Dev-LucasP/Bomberman')"
+          >
+            <h2>💣</h2>
+            <h3>Bomberman</h3>
+          </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectNotFinished('Minesweeper', 'This project is a game developed in Java with JavaFX. It\'s an adaptation of the Minesweeper game, where the player has to reveal squares without triggering mines, with the option of playing on different grid sizes to vary the difficulty.', 'https://github.com/Dev-LucasP/Demineur')"
+          >
+            <h2>🧨</h2>
+            <h3>Minesweeper</h3>
+          </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectNotFinished('Website Events', 'A showcase site created in HTML and CSS, presenting upcoming events and practical information for visitors.', 'https://github.com/Dev-LucasP/SiteEvenementiel')"
+          >
+            <h2>🎉</h2>
+            <h3>Website Events</h3>
+          </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectNotFinished('the price is right', 'This project is an adaptation of the game Un Juste Prix, developed in Python with Flask. The application uses a database to store players scores and an API to retrieve items from Amazon, so that they can be proposed as items to be guessed.', 'https://github.com/Dev-LucasP/UnJustePrix')"
+          >
+            <h2>💸</h2>
+            <h3>Right Price</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills slide-container" id="skills">
+      <div class="skills-box slide-in">
+        <h2 class="heading slide-in">Skills</h2>
+        <div class="wrapper slide-in">
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=html"
+              alt="image représentant le marathon web"
+            />
+            <h2>HTML</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=css"
+              alt="image représentant un pokédex"
+            />
+            <h2>CSS</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=js"
+              alt="image représentant un pokédex"
+            />
+            <h2>JavaScript</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=php"
+              alt="image représentant un pokédex"
+            />
+            <h2>PHP</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=laravel"
+              alt="image représentant un pokédex"
+            />
+            <h2>Laravel</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=java"
+              alt="image représentant un pokédex"
+            />
+            <h2>Java</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=gradle"
+              alt="image représentant un pokédex"
+            />
+            <h2>Gradle</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=python"
+              alt="image représentant un pokédex"
+            />
+            <h2>Python</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=postgresql"
+              alt="image représentant un pokédex"
+            />
+            <h2>SQL</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=flask"
+              alt="image représentant un pokédex"
+            />
+            <h2>Flask</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=git"
+              alt="image représentant un pokédex"
+            />
+            <h2>Git</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=gitlab"
+              alt="image représentant un pokédex"
+            />
+            <h2>GitLab</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=github"
+              alt="image représentant un pokédex"
+            />
+            <h2>GitHub</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=linux"
+              alt="image représentant un pokédex"
+            />
+            <h2>Linux</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=windows"
+              alt="image représentant un pokédex"
+            />
+            <h2>Windows</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=vscode"
+              alt="image représentant un pokédex"
+            />
+            <h2>VSC</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=eclipse"
+              alt="image représentant un pokédex"
+            />
+            <h2>Eclipse</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=idea"
+              alt="image représentant un pokédex"
+            />
+            <h2>IDEA</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=phpstorm"
+              alt="image représentant un pokédex"
+            />
+            <h2>PHPStorm</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=pycharm"
+              alt="image représentant un pokédex"
+            />
+            <h2>PyCharm</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/lucas-perez-dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/Dev-LucasP"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a
+          href="mailto:lucas.perez59450@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-gmail"></i
+        ></a>
+      </div>
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#education">Education</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <!-- <li>
+          <a href="#contact">Contact</a>
+        </li> -->
+      </ul>
+      <p class="copyright">&copy; 2024 Lucas Perez | All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/index-en.js"></script>
+  </body>
+</html>
