@@ -1,6 +1,6 @@
 # Portfolio
 
-Bienvenue sur mon site portfolio ! Ce site présente mes projets, compétences et expériences professionnelles.
+Bienvenue sur mon site portfolio ! Ce site présente mes projets, compétences et les institutions que j'ai fréquentées.
 
 ## Sections
 
