@@ -12,7 +12,6 @@
     />
   </head>
   <body>
-
     <header class="header">
       <a href="#home" class="logo">Lucas <span>Perez</span></a>
 
@@ -25,7 +24,9 @@
         <a href="#skills">Skills</a>
         <!-- <a href="#contact">Contact</a> -->
         <div class="dropdown">
-          <button class="dropbtn">English <i class="bx bx-chevron-down"></i></button>
+          <button class="dropbtn">
+            English <i class="bx bx-chevron-down"></i>
+          </button>
           <div class="dropdown-content">
             <a href="index.html" data-lang="en">Français</a>
             <a href="index-en.html" data-lang="fr">English</a>
@@ -180,10 +181,18 @@
 
           <div
             class="projects-item"
-            onclick="showProjectNotFinished('Web Marathon', 'This project is a website developed in PHP with the Laravel framework, scheduled for completion on December 18 and 19, 2025, during the exam period.', 'https://github.com/Dev-LucasP/MarathonWeb')"
+            onclick="showProjectDetails('Marathon Web', 'The Marathon project is a web application developed in PHP by a team of 8 students, including 3 in computer science and 5 in MMI. This application allows you to manage trips, offering the possibility to create trips with multiple stages, as well as add comments and likes on each trip.', 'https://github.com/Dev-LucasP/Marathon-Web')"
           >
             <h2>🏃‍♂️</h2>
-            <h3>Web Marathon</h3>
+            <h3>Marathon Web</h3>
+          </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectDetails('LENSJudge Web App', 'Development of a website inspired by LENSJudge, I designed a site over a period of 2 days in a team of 4, allowing complete management of programming competitions with authentication, mainly using PHP, Laravel, and a database.', 'https://github.com/Dev-LucasP/LENSJudge-Web-App')"
+          >
+            <h2>⚖️</h2>
+            <h3>LENSJudge Web App</h3>
           </div>
 
           <div
@@ -192,14 +201,6 @@
           >
             <h2>💣</h2>
             <h3>Bomberman</h3>
-          </div>
-
-          <div
-            class="projects-item"
-            onclick="showProjectNotFinished('the price is right', 'This project is an adaptation of the game Un Juste Prix, developed in Python with Flask. The application uses a database to store players scores and an API to retrieve items from Amazon, so that they can be proposed as items to be guessed.', 'https://github.com/Dev-LucasP/UnJustePrix')"
-          >
-            <h2>💸</h2>
-            <h3>Right Price</h3>
           </div>
         </div>
       </div>
@@ -218,10 +219,7 @@
           </div>
 
           <div class="skills-item">
-            <img
-              src="https://skillicons.dev/icons?i=css"
-              alt="image of CSS"
-            />
+            <img src="https://skillicons.dev/icons?i=css" alt="image of CSS" />
             <h2>CSS</h2>
           </div>
 
@@ -234,10 +232,7 @@
           </div>
 
           <div class="skills-item">
-            <img
-              src="https://skillicons.dev/icons?i=php"
-              alt="image of PHP"
-            />
+            <img src="https://skillicons.dev/icons?i=php" alt="image of PHP" />
             <h2>PHP</h2>
           </div>
 
@@ -290,10 +285,7 @@
           </div>
 
           <div class="skills-item">
-            <img
-              src="https://skillicons.dev/icons?i=git"
-              alt="image of Git"
-            />
+            <img src="https://skillicons.dev/icons?i=git" alt="image of Git" />
             <h2>Git</h2>
           </div>
 
