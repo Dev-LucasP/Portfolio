@@ -39,6 +39,11 @@ menuIcon.onclick = () => {
     newLink2.textContent = "English";
     navbar.appendChild(newLink2);
 
+    let newLink3 = document.createElement("a");
+    newLink3.href = "index-es.html";
+    newLink3.textContent = "Español";
+    navbar.appendChild(newLink3);
+
     if (navbarButton) {
       navbarButton.remove();
     }

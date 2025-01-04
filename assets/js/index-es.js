@@ -29,7 +29,6 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 
   if (navbar.classList.contains("active")) {
-    
     let newLink1 = document.createElement("a");
     newLink1.href = "index.html";
     newLink1.textContent = "Français";
@@ -61,8 +60,6 @@ menuIcon.onclick = () => {
   }
 };
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".dropdown");
   const dropbtn = document.querySelector(".dropbtn");
@@ -73,10 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ...existing code...
+
 function showMessage() {
   const messageElement = document.getElementById("message");
   messageElement.style.display = "block";
-  messageElement.textContent = "Under development";
+  messageElement.textContent = "En desarrollo";
 
   setTimeout(() => {
     messageElement.style.display = "none";
@@ -89,13 +88,13 @@ function showProjectDetails(title, description, link) {
 
   const projectDetails = `
     <div class="project-details-container">
-      <span class="close-btn" onclick="closeProjectDetails()">&times;</span>
-      <h2>${title}</h2>
-      <p>${description}</p>
-      <br>
-      <a href="${link}" target="_blank">Voir</a>
+        <span class="close-btn" onclick="closeProjectDetails()">&times;</span>
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <br>
+        <a href="${link}" target="_blank">Ver</a>
     </div>
-  `;
+`;
 
   projectDetailsOverlay.innerHTML = projectDetails;
 
@@ -123,13 +122,13 @@ function showProjectNotFinished(title, description, link) {
 
   const projectDetails = `
     <div class="project-details-container">
-      <span class="close-btn" onclick="closeProjectDetails()">&times;</span>
-      <h2>${title}</h2>
-      <p>${description}</p>
-      <br>
-      <p style="color: red;"> Under development </p>
+        <span class="close-btn" onclick="closeProjectDetails()">&times;</span>
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <br>
+        <p style="color: red;"> En desarrollo </p>
     </div>
-  `;
+`;
 
   projectDetailsOverlay.innerHTML = projectDetails;
 
