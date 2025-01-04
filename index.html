@@ -12,13 +12,6 @@
     />
   </head>
   <body>
-    <div id="language-popup" class="popup">
-      <div class="popup-content">
-        <h2>Choisissez votre langue / Choose your language</h2>
-        <button class="lang-btn" data-lang="always">Français</button>
-        <button class="lang-btn" data-lang="en">English</button>
-      </div>
-    </div>
     <header class="header">
       <a href="#home" class="logo">Lucas <span>Perez</span></a>
 
@@ -30,6 +23,13 @@
         <a href="#projects">Projets</a>
         <a href="#skills">Compétences</a>
         <!-- <a href="#contact">Contact</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">Français <i class="bx bx-chevron-down"></i></button>
+          <div class="dropdown-content">
+            <a href="index-en.html" data-lang="en">English</a>
+            <a href="index.html" data-lang="fr">Français</a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -71,10 +71,8 @@
             download="CV-perez-lucas.pdf"
             >Mon CV</a
           >
-          <a href="#contact" class="btn" onclick="showMessage()"
-            >Me contacter</a
+          <a href="mailto:lucas.perez59450@gmail.com" class="btn">Me contacter</a
           >
-          <p id="message" style="display: none; color: red"></p>
         </div>
       </div>
 
@@ -183,7 +181,7 @@
 
           <div
             class="projects-item"
-            onclick="showProjectNotFinished('Marathon Web', 'Ce projet est un site web développé en PHP avec le framework Laravel, prévu pour être réalisé les 18 et 19 décembre 2025, pendant la période des examens.', 'https://github.com/Dev-LucasP/MarathonWeb')"
+            onclick="showProjectDetails('Marathon Web', 'Ce projet est un site web développé en PHP avec le framework Laravel, prévu pour être réalisé les 18 et 19 décembre 2025, pendant la période des examens.', 'https://github.com/Dev-LucasP/Marathon-Web')"
           >
             <h2>🏃‍♂️</h2>
             <h3>Marathon Web</h3>
@@ -197,13 +195,6 @@
             <h3>Bomberman</h3>
           </div>
 
-          <div
-            class="projects-item"
-            onclick="showProjectNotFinished('Juste Prix', 'Ce projet est une adaptation du jeu Un Juste Prix, développée en Python avec Flask. L\'application utilise une base de données pour sauvegarder les scores des joueurs et une API permettant de récupérer des objets depuis Amazon, afin de les proposer comme éléments à deviner.', 'https://github.com/Dev-LucasP/UnJustePrix')"
-          >
-            <h2>💸</h2>
-            <h3>Juste Prix</h3>
-          </div>
         </div>
       </div>
     </section>
@@ -215,7 +206,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=html"
-              alt="image représentant le marathon web"
+              alt="image représentant HTML"
             />
             <h2>HTML</h2>
           </div>
@@ -223,7 +214,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=css"
-              alt="image représentant un pokédex"
+              alt="image représentant CSS"
             />
             <h2>CSS</h2>
           </div>
@@ -231,7 +222,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=js"
-              alt="image représentant un pokédex"
+              alt="image représentant JavaScript"
             />
             <h2>JavaScript</h2>
           </div>
@@ -239,7 +230,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=php"
-              alt="image représentant un pokédex"
+              alt="image représentant PHP"
             />
             <h2>PHP</h2>
           </div>
@@ -247,7 +238,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=laravel"
-              alt="image représentant un pokédex"
+              alt="image représentant Laravel"
             />
             <h2>Laravel</h2>
           </div>
@@ -255,7 +246,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=java"
-              alt="image représentant un pokédex"
+              alt="image représentant Java"
             />
             <h2>Java</h2>
           </div>
@@ -263,7 +254,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=gradle"
-              alt="image représentant un pokédex"
+              alt="image représentant Gradle"
             />
             <h2>Gradle</h2>
           </div>
@@ -271,7 +262,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=python"
-              alt="image représentant un pokédex"
+              alt="image représentant Python"
             />
             <h2>Python</h2>
           </div>
@@ -279,7 +270,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=postgresql"
-              alt="image représentant un pokédex"
+              alt="image représentant SQL"
             />
             <h2>SQL</h2>
           </div>
@@ -287,7 +278,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=flask"
-              alt="image représentant un pokédex"
+              alt="image représentant Flask"
             />
             <h2>Flask</h2>
           </div>
@@ -295,7 +286,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=git"
-              alt="image représentant un pokédex"
+              alt="image représentant Git"
             />
             <h2>Git</h2>
           </div>
@@ -303,7 +294,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=gitlab"
-              alt="image représentant un pokédex"
+              alt="image représentant Gitlab"
             />
             <h2>GitLab</h2>
           </div>
@@ -311,7 +302,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=github"
-              alt="image représentant un pokédex"
+              alt="image représentant GitHub"
             />
             <h2>GitHub</h2>
           </div>
@@ -319,7 +310,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=linux"
-              alt="image représentant un pokédex"
+              alt="image représentant Linux"
             />
             <h2>Linux</h2>
           </div>
@@ -327,7 +318,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=windows"
-              alt="image représentant un pokédex"
+              alt="image représentant Windows"
             />
             <h2>Windows</h2>
           </div>
@@ -335,7 +326,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=vscode"
-              alt="image représentant un pokédex"
+              alt="image représentant VSC"
             />
             <h2>VSC</h2>
           </div>
@@ -343,7 +334,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=eclipse"
-              alt="image représentant un pokédex"
+              alt="image représentant Eclipse"
             />
             <h2>Eclipse</h2>
           </div>
@@ -351,7 +342,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=idea"
-              alt="image représentant un pokédex"
+              alt="image représentant IDEA"
             />
             <h2>IDEA</h2>
           </div>
@@ -359,7 +350,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=phpstorm"
-              alt="image représentant un pokédex"
+              alt="image représentant PHPStorm"
             />
             <h2>PHPStorm</h2>
           </div>
@@ -367,7 +358,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=pycharm"
-              alt="image représentant un pokédex"
+              alt="image représentant Pycharm"
             />
             <h2>PyCharm</h2>
           </div>

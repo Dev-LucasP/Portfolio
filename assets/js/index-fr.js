@@ -2,6 +2,10 @@ let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
+const navbarButton = document.querySelector(".dropbtn"); // Cible le bouton
+
+// Cloner l'état initial de la navbar avec le bouton
+const initialNavbar = navbar.cloneNode(true);
 
 window.onscroll = () => {
   sections.forEach((sec) => {
@@ -24,7 +28,49 @@ window.onscroll = () => {
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
+
+  if (navbar.classList.contains("active")) {
+    // Ajouter les nouveaux liens lorsque la navbar est active
+    let newLink1 = document.createElement("a");
+    newLink1.href = "index.html";
+    newLink1.textContent = "Français";
+    navbar.appendChild(newLink1);
+
+    let newLink2 = document.createElement("a");
+    newLink2.href = "index-en.html";
+    newLink2.textContent = "English";
+    navbar.appendChild(newLink2);
+
+    if (navbarButton) {
+      navbarButton.remove(); // Supprime le bouton uniquement si le menu est actif
+    }
+  } else {
+    // Réinitialiser la navbar à son état initial
+    const clonedNavbar = initialNavbar.cloneNode(true);
+    const clonedNavbarButton = clonedNavbar.querySelector(".dropbtn");
+
+    if (clonedNavbarButton) {
+      clonedNavbarButton.remove(); // Supprime le bouton uniquement après reset
+    }
+
+    navbar.replaceWith(clonedNavbar); // Réinitialise la navbar sans le bouton
+    navbar = document.querySelector(".navbar"); // Re-sélectionner la navbar
+  }
 };
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.querySelector(".dropdown");
+  const dropbtn = document.querySelector(".dropbtn");
+  const dropdownContent = document.querySelector(".dropdown-content");
+
+  dropbtn.addEventListener("click", () => {
+    dropdownContent.classList.toggle("show");
+  });
+});
+
+// ...existing code...
 
 function showMessage() {
   const messageElement = document.getElementById("message");
@@ -94,34 +140,6 @@ function showProjectNotFinished(title, description, link) {
 
   document.body.appendChild(projectDetailsOverlay);
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const popup = document.getElementById("language-popup");
-  const buttons = document.querySelectorAll(".lang-btn");
-
-  if (localStorage.getItem("redirected") === "true") {
-    popup.style.display = "none";
-    localStorage.removeItem("redirected");
-  } else {
-    popup.style.display = "flex";
-  }
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const selectedLang = button.getAttribute("data-lang");
-
-      localStorage.setItem("redirected", "true");
-
-      if (selectedLang === "en") {
-        window.location.href = "index-en.html";
-      } else if (selectedLang === "fr") {
-        window.location.href = "index.html";
-      } else if (selectedLang == "always") {
-        popup.style.display = "none";
-      }
-    });
-  });
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   const slideElements = document.querySelectorAll(".slide-in");

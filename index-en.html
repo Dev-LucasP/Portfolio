@@ -12,13 +12,7 @@
     />
   </head>
   <body>
-    <div id="language-popup" class="popup">
-      <div class="popup-content">
-        <h2>Choose your language / Choisissez votre langue</h2>
-        <button class="lang-btn" data-lang="always">English</button>
-        <button class="lang-btn" data-lang="fr">Français</button>
-      </div>
-    </div>
+
     <header class="header">
       <a href="#home" class="logo">Lucas <span>Perez</span></a>
 
@@ -30,6 +24,13 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <!-- <a href="#contact">Contact</a> -->
+        <div class="dropdown">
+          <button class="dropbtn">English <i class="bx bx-chevron-down"></i></button>
+          <div class="dropdown-content">
+            <a href="index.html" data-lang="en">Français</a>
+            <a href="index-en.html" data-lang="fr">English</a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -70,8 +71,7 @@
             download="CV-perez-lucas.pdf"
             >My CV</a
           >
-          <a href="#contact" class="btn" onclick="showMessage()">Contact me</a>
-          <p id="message" style="display: none; color: red"></p>
+          <a href="mailto:lucas.perez59450@gmail.com" class="btn">Contact me</a>
         </div>
       </div>
 
@@ -212,7 +212,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=html"
-              alt="image représentant le marathon web"
+              alt="image of HTML"
             />
             <h2>HTML</h2>
           </div>
@@ -220,7 +220,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=css"
-              alt="image représentant un pokédex"
+              alt="image of CSS"
             />
             <h2>CSS</h2>
           </div>
@@ -228,7 +228,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=js"
-              alt="image représentant un pokédex"
+              alt="image of JavaScript"
             />
             <h2>JavaScript</h2>
           </div>
@@ -236,7 +236,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=php"
-              alt="image représentant un pokédex"
+              alt="image of PHP"
             />
             <h2>PHP</h2>
           </div>
@@ -244,7 +244,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=laravel"
-              alt="image représentant un pokédex"
+              alt="image of Laravel"
             />
             <h2>Laravel</h2>
           </div>
@@ -252,7 +252,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=java"
-              alt="image représentant un pokédex"
+              alt="image of Java"
             />
             <h2>Java</h2>
           </div>
@@ -260,7 +260,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=gradle"
-              alt="image représentant un pokédex"
+              alt="image of Gradle"
             />
             <h2>Gradle</h2>
           </div>
@@ -268,7 +268,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=python"
-              alt="image représentant un pokédex"
+              alt="image of Python"
             />
             <h2>Python</h2>
           </div>
@@ -276,7 +276,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=postgresql"
-              alt="image représentant un pokédex"
+              alt="image of SQL"
             />
             <h2>SQL</h2>
           </div>
@@ -284,7 +284,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=flask"
-              alt="image représentant un pokédex"
+              alt="image of Flask"
             />
             <h2>Flask</h2>
           </div>
@@ -292,7 +292,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=git"
-              alt="image représentant un pokédex"
+              alt="image of Git"
             />
             <h2>Git</h2>
           </div>
@@ -300,7 +300,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=gitlab"
-              alt="image représentant un pokédex"
+              alt="image of GitLab"
             />
             <h2>GitLab</h2>
           </div>
@@ -308,7 +308,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=github"
-              alt="image représentant un pokédex"
+              alt="image of GitHub"
             />
             <h2>GitHub</h2>
           </div>
@@ -316,7 +316,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=linux"
-              alt="image représentant un pokédex"
+              alt="image of Linux"
             />
             <h2>Linux</h2>
           </div>
@@ -324,7 +324,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=windows"
-              alt="image représentant un pokédex"
+              alt="image of Windows"
             />
             <h2>Windows</h2>
           </div>
@@ -332,7 +332,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=vscode"
-              alt="image représentant un pokédex"
+              alt="image of VSC"
             />
             <h2>VSC</h2>
           </div>
@@ -340,7 +340,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=eclipse"
-              alt="image représentant un pokédex"
+              alt="image of Eclipse"
             />
             <h2>Eclipse</h2>
           </div>
@@ -348,7 +348,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=idea"
-              alt="image représentant un pokédex"
+              alt="image of IDEA"
             />
             <h2>IDEA</h2>
           </div>
@@ -356,7 +356,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=phpstorm"
-              alt="image représentant un pokédex"
+              alt="image of PHPStorm"
             />
             <h2>PHPStorm</h2>
           </div>
@@ -364,7 +364,7 @@
           <div class="skills-item">
             <img
               src="https://skillicons.dev/icons?i=pycharm"
-              alt="image représentant un pokédex"
+              alt="image of PyCharm"
             />
             <h2>PyCharm</h2>
           </div>
