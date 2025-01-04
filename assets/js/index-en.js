@@ -2,9 +2,8 @@ let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
-const navbarButton = document.querySelector(".dropbtn"); // Cible le bouton
+const navbarButton = document.querySelector(".dropbtn");
 
-// Cloner l'état initial de la navbar avec le bouton
 const initialNavbar = navbar.cloneNode(true);
 
 window.onscroll = () => {
@@ -31,7 +30,6 @@ menuIcon.onclick = () => {
 
   if (navbar.classList.contains("active")) {
     
-    // Ajouter les nouveaux liens lorsque la navbar est active
     let newLink1 = document.createElement("a");
     newLink1.href = "index.html";
     newLink1.textContent = "Français";
@@ -43,19 +41,18 @@ menuIcon.onclick = () => {
     navbar.appendChild(newLink2);
 
     if (navbarButton) {
-      navbarButton.remove(); // Supprime le bouton uniquement si le menu est actif
+      navbarButton.remove();
     }
   } else {
-    // Réinitialiser la navbar à son état initial
     const clonedNavbar = initialNavbar.cloneNode(true);
     const clonedNavbarButton = clonedNavbar.querySelector(".dropbtn");
 
     if (clonedNavbarButton) {
-      clonedNavbarButton.remove(); // Supprime le bouton uniquement après reset
+      clonedNavbarButton.remove();
     }
 
-    navbar.replaceWith(clonedNavbar); // Réinitialise la navbar sans le bouton
-    navbar = document.querySelector(".navbar"); // Re-sélectionner la navbar
+    navbar.replaceWith(clonedNavbar);
+    navbar = document.querySelector(".navbar");
   }
 };
 
