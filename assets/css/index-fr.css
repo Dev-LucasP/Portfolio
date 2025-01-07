@@ -79,7 +79,9 @@ body {
   display: none;
   position: absolute;
   background-color: var(--second-bg-color);
-  width: calc(100% - 4rem); /* Ensure the dropdown content is the same width as the button minus the margin */
+  width: calc(
+    100% - 4rem
+  ); /* Ensure the dropdown content is the same width as the button minus the margin */
   left: 4rem; /* Align the dropdown content with the left edge of the button */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -95,7 +97,7 @@ body {
 }
 
 .navbar a::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 3px;
@@ -124,18 +126,11 @@ body {
   display: inline-block; /* Change to inline-block */
 }
 
-
-
-
 .dropdown-content.show {
   display: block;
 }
 
-
-
 /* ...existing code... */
-
-
 
 #menu-icon {
   font-size: 3.6rem;
@@ -762,9 +757,21 @@ span {
   background-color: #0056b3;
 }
 
-@media (max-width: 1285px) {
+@media (max-width: 1280px) {
   html {
     font-size: 55%;
+  }
+  .wrapper {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .wrapper {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -807,14 +814,9 @@ span {
     width: 5rem;
   }
 
-  .wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .skills-item {
     width: 100px;
     height: 100px;
-    margin: 0 -1.35rem;
   }
 
   .skills-item h2 {
@@ -829,14 +831,11 @@ span {
     width: 5rem;
   }
 
-  .wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
 
   .projects-item {
     width: 100px;
     height: 100px;
-    margin: 0 -1.35rem;
+
   }
 
   .projects-item h2 {
@@ -854,6 +853,12 @@ span {
   .footer ul li {
     display: inline-block;
     padding: 0 5px;
+  }
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -889,6 +894,10 @@ span {
   }
   .home-content h3 {
     font-size: 2.6rem;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .home-content h1 {
