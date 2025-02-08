@@ -22,6 +22,7 @@
         <a href="#education">Éducation</a>
         <a href="#projects">Projets</a>
         <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
         <!-- <a href="#contact">Contact</a> -->
         <div class="dropdown">
           <button class="dropbtn">
@@ -412,6 +413,96 @@
       </div>
     </section>
 
+    <section class="contact" id="contact">
+      <h2 class="heading">Contactez-<span>Moi</span></h2>
+      <form action="" id="contact-form">
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" id="name" placeholder="Nom" required />
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="input-box">
+            <input
+              type="tel"
+              id="tel"
+              placeholder="Numéro de téléphone"
+              pattern="[0-9]{10}"
+              title="Veuillez entrer un numéro valide (10 chiffres)"
+              required
+            />
+            <input type="text" id="objet" placeholder="Objet" required />
+          </div>
+          <div class="input-group-2">
+            <textarea
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Votre Message"
+              required
+            ></textarea>
+            <input
+              id="submit-button"
+              type="submit"
+              value="Send Message"
+              class="btn"
+            />        <p id="status"></p>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (emailjs) {
+          emailjs.init("wI4cJgjCEWlafqsgr"); // Initialisation EmailJS
+        }
+
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const submitButton = document.getElementById("submit-button");
+            submitButton.disabled = true;
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const tel = document.getElementById("tel").value.trim();
+            const objet = document.getElementById("objet").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const statusMsg = document.getElementById("status");
+
+            // Vérification simple avant l'envoi
+            if (!name || !email || !tel || !objet || !message) {
+              statusMsg.textContent = "Veuillez remplir tous les champs.";
+              submitButton.disabled = false;
+              return;
+            }
+
+            statusMsg.textContent = "Envoi en cours...";
+
+            emailjs
+              .send("service_9x4ugwk", "template_lfkmp4f", {
+                name: name,
+                email: email,
+                tel: tel,
+                objet: objet,
+                message: message,
+              })
+              .then(() => {
+                statusMsg.textContent = "Message envoyé avec succès !";
+                submitButton.disabled = false;
+                document.getElementById("contact-form").reset();
+              })
+              .catch((err) => {
+                statusMsg.textContent = "Erreur lors de l'envoi : " + err.text;
+                submitButton.disabled = false;
+              });
+          });
+      });
+    </script>
+
     <footer class="footer">
       <div class="social">
         <a
@@ -446,9 +537,9 @@
         <li>
           <a href="#skills">Compétences</a>
         </li>
-        <!-- <li>
+        <li>
           <a href="#contact">Contact</a>
-        </li> -->
+        </li>
       </ul>
       <p class="copyright">&copy; 2024 Lucas Perez | Tous droits réservés.</p>
     </footer>
