@@ -342,7 +342,7 @@ span {
 }
 
 .education {
-  padding: 100px 15px;
+  padding: 50px 10px 100px;
   background: var(--second-bg-color);
 }
 
@@ -655,7 +655,9 @@ span {
 }
 
 .contact h2 {
+  margin-top: -6rem;
   margin-bottom: 3rem;
+  font-size: 6.5rem;
   color: white;
 }
 
@@ -814,15 +816,14 @@ span {
   .wrapper {
     grid-template-columns: repeat(5, 1fr);
   }
+  section {
+    padding: 6.5rem 12% 5rem;
+  }
 }
 
 @media (max-width: 991px) {
   .header {
     padding: 2rem 3%;
-  }
-
-  section {
-    padding: 10rem 3% 2rem;
   }
 
   .home-circle {
@@ -957,5 +958,14 @@ span {
   }
   .home-img img {
     width: 56vw;
+  }
+
+  .contact form {
+    display: initial;
+    padding-bottom: 2rem;
+  }
+
+  .contact {
+    padding-bottom: 10rem;
   }
 }

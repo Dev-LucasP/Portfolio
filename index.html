@@ -222,6 +222,14 @@
             <h2>💣</h2>
             <h3>Bomberman</h3>
           </div>
+
+          <div
+            class="projects-item"
+            onclick="showProjectDetails('Jeux de la vie', 'Ce projet est une implémentation du célèbre jeu de la vie en utilisant TypeScript. Le joueur peut observer l\'évolution des cellules sur plusieurs grilles de différentes tailles en fonction de règles simples.', 'https://github.com/Dev-LucasP/Jeux-de-la-vie')"
+          >
+            <h2>🌱</h2>
+            <h3>Life Game</h3>
+          </div>
         </div>
       </div>
     </section>
@@ -376,9 +384,9 @@
 
           <div class="skills-item">
             <img
-              src="https://skillicons.dev/icons?i=eclispe"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
               alt="image représentant Eclipse"
-              onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg';"
+              onerror="this.onerror=null; this.src='https://skillicons.dev/icons?i=eclispe';"
             />
             <h2>Eclipse</h2>
           </div>
@@ -409,6 +417,71 @@
             />
             <h2>PyCharm</h2>
           </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=webstorm"
+              alt="image représentant WebStorm"
+              onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webstorm/webstorm-original.svg';"
+            />
+            <h2>WebStorm</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=docker"
+              alt="image représentant Docker"
+              onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg';"
+            />
+            <h2>Docker</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/insomnia/insomnia-original.svg"
+              alt="image représentant Docker"
+              onerror="this.onerror=null; this.src='https://skillicons.dev/icons?i=insomnia';"
+            />
+            <h2>Insomnia</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=npm"
+              alt="image représentant npm"
+              onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original.svg';"
+            />
+            <h2>npm</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=angular"
+              alt="image représentant Angular"
+              onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg';"
+            />
+            <h2>Angular</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=kotlin"
+              alt="image représentant Kotlin"
+              onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg';"
+            />
+            <h2>Kotlin</h2>
+          </div>
+
+          <div class="skills-item">
+            <img
+              src="https://skillicons.dev/icons?i=androidstudio"
+              alt="image représentant Andoid Studio"
+              onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg';"
+            />
+            <h2 style="white-space: nowrap; font-size: 1.7rem">
+              Android Studio
+            </h2>
+          </div>
         </div>
       </div>
     </section>
@@ -432,21 +505,22 @@
             />
             <input type="text" id="objet" placeholder="Objet" required />
           </div>
-          <div class="input-group-2">
-            <textarea
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Votre Message"
-              required
-            ></textarea>
-            <input
-              id="submit-button"
-              type="submit"
-              value="Send Message"
-              class="btn"
-            />        <p id="status"></p>
-          </div>
+        </div>
+        <div class="input-group-2">
+          <textarea
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Votre Message"
+            required
+          ></textarea>
+          <input
+            id="submit-button"
+            type="submit"
+            value="Send Message"
+            class="btn"
+          />
+          <p id="status"></p>
         </div>
       </form>
     </section>
